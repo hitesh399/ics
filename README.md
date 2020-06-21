@@ -7,6 +7,8 @@
 5. rename .env.example file to .env and update the mysql credentials 
 6. run `adonis serve --dev`
 
+## command to import the data into database from https://news.ycombinator.com/ `adonis crawl`
+
 # How to setup Client for Web Application
 
 1. Open terminal and go to project root directory
