@@ -53,8 +53,8 @@ export const AdminPostPage = () => {
         requestStatus(true);
         const response = await request('post/crawl');
         AppModal.messageBox(response.data.data.message);
-        refresh();
         requestStatus(false);
+        refresh();
     };
     const markAsReadUnRead = async ({ id }, { refresh }) => {
         // request.post/read/:id
@@ -167,6 +167,25 @@ export const AdminPostPage = () => {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            {appList.requesting ? (
+                                                                <tr>
+                                                                    <td
+                                                                        className="text-center"
+                                                                        colSpan={8}>
+                                                                        loading...
+                                                                    </td>
+                                                                </tr>
+                                                            ) : null}
+                                                            {!appList.requesting &&
+                                                            appList.data.length === 0 ? (
+                                                                <tr>
+                                                                    <td
+                                                                        className="text-center"
+                                                                        colSpan={8}>
+                                                                        No Data Found
+                                                                    </td>
+                                                                </tr>
+                                                            ) : null}
                                                             {appList.data.map((item, index) => {
                                                                 const isRead = get(
                                                                     item,

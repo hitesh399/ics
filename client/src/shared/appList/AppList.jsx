@@ -311,10 +311,12 @@ export class AppListProvider extends React.PureComponent {
      *
      * @returns {Promise | Error} - return a promise instance with contains the server data.
      */
-    changePage(page) {
-        if (page <= this.getTotalPage()) {
+    changePage(page, force = false) {
+        if (page <= this.getTotalPage() || force) {
             return this.fetchData(page);
         } else {
+            console.log('Done danna dan 3');
+
             return new Error('Page Not Available');
         }
     }
@@ -351,7 +353,7 @@ export class AppListProvider extends React.PureComponent {
     refresh() {
         return this.props.paginationType === 'loadMore'
             ? this.filter()
-            : this.changePage(this.props.currentPage);
+            : this.changePage(this.props.currentPage, true);
     }
     componentDidMount() {
         const { fetchOnLoad, keepAlive, values, currentPage } = this.props;
