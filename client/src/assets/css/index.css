@@ -1,0 +1,179 @@
+@import './bootstrap-extended.css';
+@import './colors.css';
+@import './components.css';
+@import './themes/dark-layout.css';
+@import './themes/semi-dark-layout.css';
+@import './core/menu/menu-types/vertical-menu.css';
+@import './pages/authentication.css';
+
+.page-scrolled .header-navbar {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(25, 42, 70, 0.13) -8px 12px 18px 0px;
+}
+.mobile-sidebar.menu-open .sidenav-overlay {
+    display: block;
+}
+
+button.link {
+    background: none !important;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+}
+button.link:focus {
+    outline: 0;
+}
+.mobile-sidebar.menu-open .header-navbar.fixed-top {
+    left: 0;
+}
+.form-check {
+    padding-left: 0;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(0.75rem);
+}
+.custom-switch .custom-control-label {
+    width: auto;
+    padding-left: 3px;
+}
+.custom-switch .custom-control-label::before {
+    height: 15px;
+}
+.password-field .input-group-append {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.password-field.valid .input-group-append,
+.password-field.invalid .input-group-append {
+    right: 27px;
+}
+.breadcrumb {
+    background-color: #f3f4f4;
+}
+
+.breadcrumb-item.active {
+    color: #5a8dee;
+}
+html body .content.app-content {
+    min-height: calc(100vh - 52px);
+    overflow: auto;
+}
+.confirm-danger .modal-header {
+    background-color: #ff5b5c;
+}
+.confirm-danger .modal-header .modal-title {
+    color: #fff;
+}
+.fixed-footer .footer {
+    bottom: 0;
+}
+.fixed-footer .footer,
+.fixed-top {
+    position: fixed;
+    z-index: 1030;
+    right: 0;
+    left: 0;
+}
+.mr-50,
+.mx-50 {
+    margin-right: 0.5rem !important;
+}
+
+.customizer {
+    max-width: 90%;
+    overflow-y: auto;
+}
+
+body.dark-layout .main-header-navbar.fixed-top {
+    background-color: rgb(39, 46, 72);
+    box-shadow: rgba(26, 35, 59, 0.7) -8px 12px 18px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    html body.vertical-layout .app-content .content-wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.list-animated-item {
+    position: relative;
+}
+.list-animated-item .list-animated-content {
+    /* position: absolute; */
+    margin-top: -100%;
+    opacity: 0;
+}
+.list-animated-item.on {
+    position: initial;
+}
+.list-animated-item.on .list-animated-content {
+    opacity: 1;
+    margin-top: 0;
+    transition: ease-in 0.5s;
+}
+
+.custom-switch .custom-control-label {
+    padding-left: 32px;
+}
+.custom-switch .custom-control-label::before {
+    height: 14px;
+}
+
+table th.sorting {
+    position: relative;
+    cursor: pointer;
+}
+
+table th.sorting .sorting--icon {
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    right: 3px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
+}
+table th.sorting .label {
+    margin-right: 20px;
+    display: inline-block;
+}
+table th.sorting i.clear-sorting {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    z-index: 99999999999999999999;
+    font-size: 14px;
+}
+table th.sorting .label i {
+    cursor: pointer;
+}
+table th.sorting .sorting--icon .disable {
+    color: #cacaca;
+}
+.table-responsive {
+    padding-top: 7px;
+}
+
+.image-selector {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e2e2e2;
+    border: 2px dashed #666;
+    cursor: pointer;
+}
+.image-selector img {
+    max-width: 100%;
+    max-height: 100%;
+}
