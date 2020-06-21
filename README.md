@@ -1,3 +1,10 @@
+# Software Require
+
+1. node >= v13.11.0
+3. adonis = 4.*.*
+4. MySql = 5.7.*
+5. npm >= 6.13.7
+
 # How to setup Server for API
 
 1. Clone repo
